@@ -190,7 +190,6 @@ export default function Home() {
           <div className="bg-spotify-dark/80 backdrop-blur-sm rounded-2xl p-8 border border-spotify-gray-400/20 animate-slide-up">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-spotify-white mb-2">🎵 My Duke Memories</h2>
-              <p className="text-spotify-gray-200">Favorites first, then graduation, friends, adventures, and chapel!</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-3">
