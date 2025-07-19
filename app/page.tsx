@@ -64,8 +64,8 @@ export default function Home() {
     { src: "/Images/GoodDays.JPG", alt: "Good Days", title: "Good Days", subtitle: "Best Times at Duke", type: 'image' },
     { src: "/holiii.JPG", alt: "Holiday Fun", title: "Holiday Fun", subtitle: "Holiday Memories", type: 'image' },
     { src: "/FCCP.jpg", alt: "FCCP Event", title: "FCCP Event", subtitle: "Professional Event", type: 'image' },
-    { src: "/ACC.jpg", alt: "ACC Event", title: "ACC Event", subtitle: "Conference Event", type: 'image' },
-    { src: "/udt.JPG", alt: "UDT Event", title: "UDT Event", subtitle: "University Event", type: 'image' },
+    { src: "/ACC.jpg", alt: "ACC Event", title: "ACC Event", subtitle: "Basketball ACC", type: 'image' },
+    { src: "/udt.JPG", alt: "UDT Event", title: "UDT Event", subtitle: "Grad Photoshoot", type: 'image' },
     { src: "/mascot.jpg", alt: "Mascot", title: "Mascot", subtitle: "Duke Mascot", type: 'image' },
     { src: "/formals.jpg", alt: "Formals", title: "Formals", subtitle: "Formal Event", type: 'image' },
     { src: "/uncFb.jpg", alt: "UNC Football", title: "UNC Football", subtitle: "Rivalry Game", type: 'image' },
@@ -145,22 +145,23 @@ export default function Home() {
 
                 <div className="flex items-center space-x-4">
                   <a 
-                    href="https://open.spotify.com/user/5rtrqo58ir4b84cah4efmvtf1" 
+                    href="https://open.spotify.com/playlist/2AvPhfLhDLhusLrQagoHQX?si=WLja0i70S-u_3GjCMbakHw" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-spotify-green hover:bg-spotify-green-hover text-spotify-black font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105"
                   >
                     <span>🎵</span>
-                    <span>Spotify</span>
+                    <span>Playlist</span>
                   </a>
+
                   <a 
-                    href="https://music.youtube.com/@NLokesh1329" 
+                    href="https://music.youtube.com/playlist?list=PLkDKrvB3BwsDRkU1KSqPV71ieycPRzkhh&si=n9eIsIxNseLZEiEJ" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105"
                   >
                     <span>🎵</span>
-                    <span>YouTube Music</span>
+                    <span>Playlist</span>
                   </a>
                   <span className="text-spotify-gray-400 text-xs">• Updated today</span>
                 </div>
