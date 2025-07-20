@@ -186,115 +186,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Gallery section */}
-          <div className="bg-spotify-dark/80 backdrop-blur-sm rounded-2xl p-8 border border-spotify-gray-400/20 animate-slide-up">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-spotify-white mb-2">🎵 My Duke Memories</h2>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-3">
-              {mediaItems.map((item, index) => (
-                <div 
-                  key={index}
-                  className="group relative overflow-hidden rounded-xl bg-spotify-light hover:bg-spotify-gray-400 transition-all duration-300 cursor-pointer"
-                  onClick={() => {
-                    setSelectedMedia(item);
-                    setIsModalOpen(true);
-                  }}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      setSelectedMedia(item);
-                      setIsModalOpen(true);
-                    }
-                  }}
-                >
-                  {item.type === 'image' ? (
-                    <img 
-                      src={item.src} 
-                      alt={item.alt} 
-                      className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : (
-                    <div className="w-full h-32 bg-gradient-to-br from-spotify-green to-spotify-green-hover flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                      <div className="text-center">
-                        <div className="text-2xl mb-1">🎥</div>
-                        <p className="text-spotify-black font-semibold text-xs">Video</p>
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Play button overlay for videos */}
-                  {item.type === 'video' && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-10 h-10 bg-spotify-green rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-spotify-black text-sm">▶️</span>
-                      </div>
-                    </div>
-                  )}
-                  
-                  <div className="absolute inset-0 bg-gradient-to-t from-spotify-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-2 left-2 text-spotify-white">
-                      <p className="font-semibold text-xs">{item.title}</p>
-                      <p className="text-xs text-spotify-gray-200">{item.subtitle}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-spotify-gray-100 text-xs">
-                Click any photo or video to view in full size • ESC key or click outside to close
-              </p>
-            </div>
-          </div>
+          {/* Gallery section - MEDIA GALLERY COMMENTED OUT */}
         </div>
       </div>
 
-      {/* Modal for full-size viewing */}
-      {isModalOpen && selectedMedia && (
-        <div 
-          className="fixed inset-0 bg-spotify-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setIsModalOpen(false)}
-        >
-          <div className="relative max-w-4xl max-h-[90vh] w-full">
-            {/* Close button */}
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-spotify-green rounded-full flex items-center justify-center text-spotify-black font-bold hover:bg-spotify-green-hover transition-colors duration-300"
-              aria-label="Close modal"
-            >
-              ✕
-            </button>
-            
-            {/* Media content */}
-            <div className="bg-spotify-dark rounded-2xl p-6 border border-spotify-gray-400/20">
-              <h3 className="text-xl font-bold text-spotify-white mb-2">{selectedMedia.title}</h3>
-              <p className="text-spotify-gray-200 mb-4">{selectedMedia.subtitle}</p>
-              
-              {selectedMedia.type === 'image' ? (
-                <img 
-                  src={selectedMedia.src} 
-                  alt={selectedMedia.alt} 
-                  className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
-                />
-              ) : (
-                <video 
-                  src={selectedMedia.src} 
-                  controls
-                  className="w-full h-auto max-h-[70vh] rounded-lg"
-                  preload="metadata"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Modal for full-size viewing - MEDIA MODAL COMMENTED OUT */}
     </main>
   );
 }
